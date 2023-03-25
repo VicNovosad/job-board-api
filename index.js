@@ -9,7 +9,7 @@ $.ajax({
                 const $row =  $(`<div class="row">
                     <div class="icon">
                         <div class="img-wrap">
-                            <img src="${row.company_logo}" alt="">
+                            <img src="${row.company_logo}" alt="logo of ${row.company}" onError="this.onerror=null;this.src='/anavailable.jpg';">
                         </div>
                     </div>
                     <div class="left-section">
@@ -38,10 +38,10 @@ $.ajax({
         })
 
         // if image is not available change the image to default jpg
-        $('.container-box img').each(function(index){
-            if ($(this).width() === 0){
-                $(this).attr('src', 'anavailable.jpg')
-            };
-        })
+        // $('.container-box img').each(function(index){
+        //     if ($(this).width() === 0){
+        //         $(this).attr('src', 'anavailable.jpg')
+        //     };
+        // })
     }
 })
